@@ -1,0 +1,152 @@
+h1,h2,h3,h4,h5 {
+    font-weight: 700;
+    color: #34447c;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #052649;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.custom-card:hover {
+    color: #052649;
+    transform: none;
+}
+
+.card {
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(11, 21, 114, 0.1);
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(26, 25, 128, 0.2);
+}
+
+.card.specific-card:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(72, 87, 219, 0.1);
+}
+
+.card.specific-card:hover .text-body-secondary {
+    color: #666;
+}
+
+.lesson-content {
+    /* max-height: 700px; */
+    overflow: auto;
+}
+
+.lesson-content p {
+    font-size: 14px;
+    color: #333;
+}
+
+.card.specific-card {
+    border: 2px solid #eeeff1;
+}
+
+.card.specific-card:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(72, 87, 219, 0.1);
+    border-color: #f6f9fc;
+}
+
+.card:hover .card-title {
+    color: rgb(22, 4, 100);
+}
+
+.grammar-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.grammar-name:hover {
+    color: #34447c;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #052649 15%, #fff 10%);
+    border-radius: 10px;
+}
+
+.icon-container {
+    background-color: #052649;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.arrow-icon {
+    color: #fff;
+}
+
+.grammar-name {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.input-group {
+    border: 1px solid #6694c2;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.input-group .form-control {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.input-group .btn {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+button i {
+    font-size: 20px;
+    color: #000;
+}
+
+button i.active {
+    color: #ff0000;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

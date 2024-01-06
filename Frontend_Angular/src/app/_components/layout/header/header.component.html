@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <div class="navbar-logo">
+        <a href="/home" class="nav-link" routerLink="home"><img src="../../assets/img/logo.png" class="logo"
+            loading="lazy" /></a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item">
+            <a href="/home" class="nav-link" routerLink="home">Trang chủ </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="/practice-listening-reading" class="nav-link" routerLink="practice-listening-reading">Luyện L & R </a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li>
+                <a href="/study" class="dropdown-item" routerLink="study">Phần 1</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/practice-speaking-writing" class="nav-link" routerLink="practice-speaking-writing">Luyện S & W </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="/home" class="nav-link" routerLink="home">Đề thi thử </a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a href="/home" class="dropdown-item" routerLink="home">Thi Full Test</a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Thi Mini Test</a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Thi đấu</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="/home" class="nav-link" routerLink="home">Kỹ năng </a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a href="/grammar" class="dropdown-item" routerLink="grammar">Ngữ Pháp</a></li>
+              <li><a href="/topic" class="dropdown-item" routerLink="topic">Từ Vựng</a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Tra cứu từ điển</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="/home" class="nav-link" routerLink="home">Học Tùy Chọn</a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a href="/home" class="dropdown-item" routerLink="home">Học cải thiện</a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Tài liệu miễn phí</a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Học thông qua bài giảng</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/home" class="nav-link" routerLink="home">Góp ý </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="/home" class="nav-link" routerLink="home">TOEIC Tips </a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a href="/home" class="dropdown-item" routerLink="home">TOEIC Listening Tips </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">TOEIC Reading Tips </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Blog </a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a href="/login" class="nav-link" routerLink="login">Đăng nhập </a>
+          </li>
+
+          <li class="nav-item dropdown" *ngIf="isLoggedIn">
+
+            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" style="margin-top: 4px;"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../assets/img/logo.png" alt="mdo" width="32" height="32" class="rounded-circle"
+                loading="lazy">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a href="/home" class="dropdown-item" routerLink="home">Ghi chú của bạn </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Thông báo mới </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Hồ sơ cá nhân </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Lộ trình học </a></li>
+              <li><a href="/home" class="dropdown-item" routerLink="home">Từ vựng cá nhân </a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <div class="d-flex justify-content-center" style="cursor: pointer;" href="#">
+                  <button mat-raised-button color="primary" class="text-white" (click)="logout()">Đăng xuất</button>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <span
+          class="badge d-flex align-items-center ms-5 p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill">
+          <img class="rounded-circle me-1" width="24" height="24"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_North_Vietnam_%281955%E2%80%931976%29.svg/230px-Flag_of_North_Vietnam_%281955%E2%80%931976%29.svg.png"
+            alt="" loading="lazy" />
+          <i class="fas fa-caret-down"></i>
+        </span>
+
+
+      </div>
+    </div>
+  </nav>

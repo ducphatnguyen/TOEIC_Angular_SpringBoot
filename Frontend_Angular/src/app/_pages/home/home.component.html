@@ -1,0 +1,170 @@
+<app-slider></app-slider>
+<div class="container mt-5">
+
+  <div id="test">
+    <h1 class="text-center mt-5"><span>Luyện thi thử TOEIC online 2023</span></h1>
+    <p>
+      Chào mừng đến với
+      <span class="fst-italic fw-bolder" style="color: rgb(72, 20, 131)">TOEIC 2023</span>
+      , trang web TOEIC cung cấp cho người học các bài luyện tập
+      theo từng part, đề thi thử cũng như các bài tập về từ vựng và ngữ pháp.
+      Bắt đầu hành trình chinh phục chứng chỉ TOEIC với các bài luyện tập trên
+      trang web của chúng tôi ngay hôm nay!
+    </p>
+  </div>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+    <mat-tab label="NGHE VÀ ĐỌC">
+      <app-listening-reading></app-listening-reading>
+    </mat-tab>
+    <mat-tab label="NÓI VÀ VIẾT">
+      <app-speaking-writing></app-speaking-writing>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!-- <h1 class="my-5">Chức năng Website</h1> -->
+  <div class="d-flex justify-content-center"><button class="button mt-2 ">Học ngay thôi nào</button></div>
+  <div class="mt-4 row row-cols-1 row-cols-md-2 align-items-md-center g-5 mb-5 bg-primary-subtle border rounded-4 pb-5">
+
+    <div class="col d-flex flex-column align-items-start gap-2">
+      <img src="https://www.dungplus.com/wp-content/uploads/2019/07/4-ki-nang.jpg" alt="" loading="lazy" width="100%" />
+      <!-- <button class="button mt-3 ">Học ngay</button> -->
+    </div>
+
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="col d-flex flex-column gap-2">
+          <div id="card1" class="card">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-circle-question fa-2x mb-4"></i>
+              <h5 class="card-title">Ngân hàng đề thi</h5>
+              <p class="card-text">
+                Ngân hàng đề thi đa dạng với nhiều chủ đề khác nhau sẽ giúp
+                bạn chuẩn bị tốt nhất cho kỳ thi của mình
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <div id="card2" class="card">
+            <div class="card-body text-center">
+              <i class="fa-brands fa-algolia fa-2x mb-4"></i>
+              <h5 class="card-title">Mô phỏng bài thi thật</h5>
+              <p class="card-text">
+                Các bài thi thử có cấu trúc giống như bài thi thật sẽ giúp bạn
+                vượt qua kỳ thi một cách thành công
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <div id="card3" class="card">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-anchor fa-2x mb-4"></i>
+              <h5 class="card-title">Không cần đăng nhập hoặc đăng ký</h5>
+              <p class="card-text">
+                Không cần đăng nhập hoặc đăng ký, tiến trình học tập của bạn
+                vẫn sẽ được lưu lại. Bạn có thể tự do luyện tập các câu hỏi
+                với các mức độ khác nhau
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <div id="card4" class="card">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-chart-simple fa-2x mb-4"></i>
+              <h5 class="card-title">Thống kê kết quả chi tiết</h5>
+              <p class="card-text">
+                Sau khi hoàn thành mỗi bài luyện tập, bạn có thể xem thống kê
+                chi tiết kết quả bài làm của mình
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="jumbotron">
+    <p>{{ content }}</p>
+  </header>
+
+  <section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button color="primary">Primary</button>
+      <button mat-raised-button color="accent">Accent</button>
+      <button mat-raised-button color="warn">Warn</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Stroked</div>
+    <div class="example-button-row">
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Flat</div>
+    <div class="example-button-row">
+      <button mat-flat-button>Basic</button>
+      <button mat-flat-button color="primary">Primary</button>
+      <button mat-flat-button color="accent">Accent</button>
+      <button mat-flat-button color="warn">Warn</button>
+      <button mat-flat-button disabled>Disabled</button>
+      <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+
+  <section>
+    <div class="example-label">Icon</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <mat-divider></mat-divider>
+
+</div>

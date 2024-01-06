@@ -1,0 +1,40 @@
+<div>
+    <h1>NGHE</h1>
+    <div class="row d-flex justify-content-start">
+        <div *ngFor="let section of listeningSections" class="col-lg-3 col-md-6 col-sm-12 d-flex">
+            <!-- Hiển thị thông tin về phần nghe -->
+            <a href="/home" class="nav-link" routerLink="home" class="card text-decoration-none mb-3">
+                <div class="card-image">
+                    <img [src]="'http://localhost:9004/images/' + section.image" alt="Section" class="card-img-top"
+                        loading="lazy" />
+                </div>
+                <div class="card-body">
+                    <p class="fw-bolder underline-hover">{{ section.name }}</p>
+                    <p class="card-text overflow-ellipsis" :title="section.description">
+                        {{ section.description }}
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <h1 class="mt-4">ĐỌC</h1>
+    <div class="row d-flex justify-content-start">
+        <div *ngFor="let section of readingSections" class="col-lg-3 col-md-6 col-sm-12">
+            <!-- Hiển thị thông tin về phần đọc -->
+            <a href="/home" class="nav-link" routerLink="home" class="card text-decoration-none mb-3">
+                <div class="card-image">
+                    <img [src]="'http://localhost:9004/images/' + section.image" alt="Section" class="card-img-top"
+                        style="height: 143px;" loading="lazy" />
+                </div>
+                <div class="card-body ">
+                    <p class="fw-bolder underline-hover">{{ section.name }}</p>
+                    <p class="card-text overflow-ellipsis" :title="section.description">
+                        {{ section.description }}
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

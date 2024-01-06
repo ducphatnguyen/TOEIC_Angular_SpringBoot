@@ -1,0 +1,78 @@
+<div class="container">
+    <h1 class="text-center mt-5">
+        <span>HỌC TỪ VỰNG TOEIC THEO CHỦ ĐỀ</span>
+    </h1>
+
+    <div class="row mt-5">
+        <div class="col-lg col-md col-sm">
+
+            <div class="d-flex justify-content-center mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" v-model="transcript" placeholder="Tìm kiếm" />
+                    <div class="input-group-append">
+                        <!-- <button class="btn btn-light-emphasis" @click="startSpeechRecognition">
+                            <i class="fas fa-microphone" :class="{ active: isSpeaking }"></i>
+                        </button> -->
+                        <button class="btn btn-light-emphasis">
+                            <i class="fas fa-microphone" :class="{ active: isSpeaking }"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card specific-card border-0">
+                <div class="card-body lesson-content">
+                    <div class="row">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-6" v-for="topic in filteredTopics" :key="topic.topicId"> -->
+                            <!-- <router-link :to="{ name: 'topic.show', params: { topicId: topic.topicId } }"
+                                class="card mb-2 text-decoration-none border-0 shadow-lg">
+                                <div class="card-body test row">
+                                    <div class="col-lg-3">
+                                        <img :src="getImageUrl(topic.image)" class="card-img-top" alt="Topic Image"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <span class="grammar-name ms-2 text-uppercase">{{ topic.topicName }}</span>
+                                    </div>
+
+                                </div>
+                            </router-link> -->
+                        <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let topic of topics">
+                            <a href="/topic" class="nav-link" routerLink="topic" class="card mb-2 text-decoration-none border-0 shadow-lg">
+                                <div class="card-body test row">
+                                    <div class="col-lg-3">
+                                        <img class="card-img-top" [src]="'http://localhost:9004/images/' + topic.image" alt="Topic Image"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <span class="grammar-name ms-2 text-uppercase">{{ topic.topicName }}</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 text-decoration-none">
+            <h5 class="fw-bold"><i class="fa-solid fa-bolt text-warning me-2"></i>OTHER PRACTICES:</h5>
+
+            <!-- <div class="card mb-2" v-for="section in docngheSections" :key="section.id">
+                <router-link class="card-body text-decoration-none custom-card"
+                    :to="{ name: 'practice.show', params: { sectionId: section.id } }">
+                    {{ section.name }}
+                </router-link>
+            </div> -->
+
+            <!-- <div class="card mb-2" v-for="section in docngheSections" :key="section.id">
+                <router-link class="card-body text-decoration-none custom-card"
+                    :to="{ name: 'practice.show', params: { sectionId: section.id } }">
+                    {{ section.name }}
+                </router-link>
+            </div> -->
+
+        </div>
+    </div>
+</div>
